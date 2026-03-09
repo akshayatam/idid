@@ -35,7 +35,8 @@ fn main() {
     let cli = Cli::parse();
 
     if let Err(err) = ensure_log_file_exists() {
-        eprintln!("Error preparing log file: {err}")
+        eprintln!("Error preparing log file: {err}");
+        std::process::exit(1);
     }
 
     match cli.command {
