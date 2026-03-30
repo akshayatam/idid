@@ -3,6 +3,7 @@ use clap::{Parser, Subcommand};
 use std::fs::{self, OpenOptions};
 use std::io::{BufWriter, Write};
 use std::path::Path;
+use std::sync::TryLockResult;
 
 const LOG_DIR: &str = "data";
 const LOG_FILE: &str = "data/log.csv";
