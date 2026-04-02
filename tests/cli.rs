@@ -60,5 +60,8 @@ fn history_prints_existing_log_contents() {
     let output = run_idid(&["history"], temp.path());
 
     assert!(output.status.success());
-    assert_eq!(String::from_utf8_lossy(&output.stdout), format!("{expected}\n"));
+    assert_eq!(
+        String::from_utf8_lossy(&output.stdout),
+        format!("{expected}\n")
+    );
 }
